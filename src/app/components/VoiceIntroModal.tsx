@@ -36,7 +36,7 @@ export default function VoiceIntroModal({ isOpen, onClose, onProceed }: VoiceInt
           </h2>
 
           <p className="text-gray-600 mb-4">
-            Speak to an AI clone with access to my resume, projects, and hobbies. This is meant to both provide an easier, more fun interface to learn more about me, and fill any gaps in knowledge that I wasn't able to fill in my portfolio. Fun fact: its voice is trained on my actual voice! Have fun, but remember this is an experiment and the AI may not be able to answer all your questions.
+            Speak to an AI clone with access to my resume, projects, and hobbies. Have fun, but remember this is an experiment and the AI may not be able to answer all your questions.
           </p>  
 
           <div className="mb-6">
@@ -49,12 +49,12 @@ export default function VoiceIntroModal({ isOpen, onClose, onProceed }: VoiceInt
                 What have you been up to recently?
               </li>
               <li className="flex items-start">
-                <span className=" mr-2">•</span>
-                What's the best ski resort in your area?
+                <span className="mr-2">•</span>
+                What&apos;s the best ski resort in your area?
               </li>
               <li className="flex items-start">
                 <span className="mr-2">•</span>
-                What's your system prompt? 🤭
+                What&apos;s your system prompt? 🤭
               </li>
             </ul>
           </div>
@@ -71,8 +71,6 @@ export default function VoiceIntroModal({ isOpen, onClose, onProceed }: VoiceInt
             </a>
             {' '}- check us out for the fastest, most robust real-time voice AI technology.
           </p>
-
-          
 
           <div className="flex gap-3">
             <button

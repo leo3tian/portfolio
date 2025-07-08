@@ -11,7 +11,7 @@ export default function Work() {
         <div className="mb-12">
           <h1 className="text-3xl font-normal text-gray-900 mb-4">Projects</h1>
           <p className="text-gray-700 leading-relaxed">
-            A collection of projects I've worked on, from internships to personal experiments. 
+            A collection of projects I&apos;ve worked on, from internships to personal experiments. 
             Each project represents a learning opportunity and a chance to solve interesting problems.
           </p>
         </div>

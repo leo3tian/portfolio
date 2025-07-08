@@ -18,15 +18,15 @@ export default function Home() {
             </h1>
             <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
               <p>
-                Hi, I'm a student at the University of Washington majoring in{' '}
+                Hi, I&apos;m a student at the University of Washington majoring in{' '}
                 <Link href="#" className="text-blue-600 hover:underline">
                   Computer Science
                 </Link>
                 . My interests include intelligent systems and applying them to the real world. 
-                I'm a Software Engineer Intern at Ultravox AI and a TA for the CSE 12x courses at UW.
+                I&apos;m a Software Engineer Intern at Ultravox AI and a TA for the CSE 12x courses at UW.
               </p>
               <p>
-                I'm passionate about building systems that solve real problems, particularly in AI/ML, 
+                I&apos;m passionate about building systems that solve real problems, particularly in AI/ML, 
                 full-stack development, and developer tools. I enjoy the entire process from ideation 
                 to deployment, with a focus on clean code and user experience.
               </p>
@@ -41,19 +41,19 @@ export default function Home() {
           <h2 className="text-2xl font-medium text-gray-900 mb-8">About Me</h2>
           <div className="space-y-6">
             <p className="text-gray-700 leading-relaxed">
-              I'm a developer who loves turning ideas into reality through code. With a focus on clean, 
+              I&apos;m a developer who loves turning ideas into reality through code. With a focus on clean, 
               efficient solutions and user-centered design, I create digital experiences that are both 
               functional and beautiful.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open source 
+              When I&apos;m not coding, you can find me exploring new technologies, contributing to open source 
               projects, or sharing knowledge with the developer community. I believe in the power of 
               technology to solve real-world problems and make a positive impact.
             </p>
             <p className="text-gray-700 leading-relaxed">
               My approach to development emphasizes collaboration, continuous learning, and building 
               sustainable solutions. I enjoy working across the full stack and am always excited to 
-              take on new challenges that push the boundaries of what's possible.
+              take on new challenges that push the boundaries of what&apos;s possible.
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Contact</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Feel free to reach out if you'd like to collaborate on a project or just chat about technology.
+            Feel free to reach out if you&apos;d like to collaborate on a project or just chat about technology.
           </p>
           <div className="space-x-6">
             <a 

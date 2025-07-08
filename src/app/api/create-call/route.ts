@@ -6,7 +6,7 @@ const AGENT = process.env.ULTRAVOX_AGENT;
 export async function POST(request: NextRequest) {
   try {
     // Parse the request body (though currently not used, keeping for future)
-    const body = await request.json();
+    // const body = await request.json();
     
     const response = await fetch(`https://api.ultravox.ai/api/agents/${AGENT}/calls`, {
       method: "POST",
