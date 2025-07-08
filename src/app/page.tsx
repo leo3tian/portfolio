@@ -1,103 +1,128 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Playfair_Display } from 'next/font/google';
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  weight: ['400', '500']
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Takes up most of the viewport */}
+      <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-left">
+            <h1 className={`text-6xl font-normal text-gray-900 mb-6 ${playfair.className}`}>
+              Leo Tian 🏂
+            </h1>
+            <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
+              <p>
+                Hi, I'm a student at the University of Washington majoring in{' '}
+                <Link href="#" className="text-blue-600 hover:underline">
+                  Computer Science
+                </Link>
+                . My interests include intelligent systems and applying them to the real world. 
+                I'm a Software Engineer Intern at Ultravox AI and a TA for the CSE 12x courses at UW.
+              </p>
+              <p>
+                I'm passionate about building systems that solve real problems, particularly in AI/ML, 
+                full-stack development, and developer tools. I enjoy the entire process from ideation 
+                to deployment, with a focus on clean code and user experience.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* About Me Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-medium text-gray-900 mb-8">About Me</h2>
+          <div className="space-y-6">
+            <p className="text-gray-700 leading-relaxed">
+              I'm a developer who loves turning ideas into reality through code. With a focus on clean, 
+              efficient solutions and user-centered design, I create digital experiences that are both 
+              functional and beautiful.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              When I'm not coding, you can find me exploring new technologies, contributing to open source 
+              projects, or sharing knowledge with the developer community. I believe in the power of 
+              technology to solve real-world problems and make a positive impact.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              My approach to development emphasizes collaboration, continuous learning, and building 
+              sustainable solutions. I enjoy working across the full stack and am always excited to 
+              take on new challenges that push the boundaries of what's possible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-medium text-gray-900 mb-8">Experience</h2>
+          <div className="space-y-8">
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-medium text-gray-900">Software Engineer Intern</h3>
+                <span className="text-sm text-gray-500">Summer 2024</span>
+              </div>
+              <p className="text-gray-600 mb-3">Ultravox AI</p>
+              <p className="text-gray-700 leading-relaxed">
+                Built and optimized real-time voice AI systems for enterprise applications. 
+                Reduced conversation latency by 40% and helped scale system to handle 10x more concurrent calls.
+              </p>
+            </div>
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-medium text-gray-900">Teaching Assistant</h3>
+                <span className="text-sm text-gray-500">2023-2024</span>
+              </div>
+              <p className="text-gray-600 mb-3">University of Washington CSE</p>
+              <p className="text-gray-700 leading-relaxed">
+                TA for CSE 12x introductory programming courses. Led lab sections, held office hours, 
+                and mentored 100+ students in programming fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-medium text-gray-900 mb-6">Contact</h2>
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Feel free to reach out if you'd like to collaborate on a project or just chat about technology.
+          </p>
+          <div className="space-x-6">
+            <a 
+              href="mailto:leo.tian@example.com" 
+              className="text-blue-600 hover:underline"
+            >
+              Email
+            </a>
+            <a 
+              href="https://github.com/leotian" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://linkedin.com/in/leotian" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
