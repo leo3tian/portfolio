@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Playfair_Display } from 'next/font/google';
+import PinnedPhoto from './components/PinnedPhoto';
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -35,26 +36,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Me Section */}
+      {/* Current Focus Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-medium text-gray-900 mb-8">About Me</h2>
-          <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed">
-              I&apos;m a developer who loves turning ideas into reality through code. With a focus on clean, 
-              efficient solutions and user-centered design, I create digital experiences that are both 
-              functional and beautiful.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              When I&apos;m not coding, you can find me exploring new technologies, contributing to open source 
-              projects, or sharing knowledge with the developer community. I believe in the power of 
-              technology to solve real-world problems and make a positive impact.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              My approach to development emphasizes collaboration, continuous learning, and building 
-              sustainable solutions. I enjoy working across the full stack and am always excited to 
-              take on new challenges that push the boundaries of what&apos;s possible.
-            </p>
+          <h2 className="text-2xl font-medium text-gray-900 mb-2">Currently Working On</h2>
+          <p className="text-sm text-gray-500 mb-8">Updated July 9</p>
+          <div className="space-y-16">
+            
+            {/* Internship */}
+            <div className="relative">
+              <PinnedPhoto 
+                src="/ultravoxteam.jpg" 
+                alt="Ultravox AI office"
+                side="right"
+                rotation={-3}
+                caption="Love the team!"
+              />
+              <h3 className="text-lg font-medium text-gray-900 mb-3">Interning at Ultravox AI</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Building real-time voice AI systems that enable natural conversations between humans and AI. 
+                Working with ex-Google engineers and MIT PhD researchers.
+              </p>
+            </div>
+
+            {/* Projects */}
+            <div className="relative">
+              <PinnedPhoto 
+                src="/sharingsussy.png" 
+                alt="Sussi app interface"
+                side="left"
+                rotation={2}
+                caption="Presenting Sussi "
+              />
+              <h3 className="text-lg font-medium text-gray-900 mb-3">Building Sussi</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Building Sussi, a student monitoring app for teachers that uses AI to evaluate student engagement
+                and automate classroom administration. Leverages LlaMa 4 reasoning to convert screenshot data into 
+                actionable set of boolean and integer based data. Previously won 1st at the 2025 Seattle Meta LlaMa 
+                Hackathon!
+              </p>
+            </div>
+
+            {/* Learning */}
+            <div className="relative">
+              <h3 className="text-lg font-medium text-gray-900 mb-3">Currently Learning</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Diving deeper into distributed systems and real-time communication protocols. Also exploring 
+                the intersection of AI and user experience design - particularly how to make AI interactions 
+                feel natural and intuitive rather than robotic.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -66,19 +98,30 @@ export default function Home() {
           <div className="space-y-8">
             <div>
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-medium text-gray-900">Software Engineer Intern</h3>
-                <span className="text-sm text-gray-500">Summer 2024</span>
+                <h3 className="text-lg font-medium text-gray-900">Forward Deployed Software Engineer Intern</h3>
+                <span className="text-sm text-gray-500">Fall 2025</span>
               </div>
-              <p className="text-gray-600 mb-3">Ultravox AI</p>
+              <p className="text-gray-600 mb-3">Palantir</p>
               <p className="text-gray-700 leading-relaxed">
-                Built and optimized real-time voice AI systems for enterprise applications. 
-                Reduced conversation latency by 40% and helped scale system to handle 10x more concurrent calls.
+                Incoming Fall 2025 - FDSE Commercial Team
               </p>
             </div>
             <div>
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-medium text-gray-900">Teaching Assistant</h3>
-                <span className="text-sm text-gray-500">2023-2024</span>
+                <h3 className="text-lg font-medium text-gray-900">Software Engineer Intern</h3>
+                <span className="text-sm text-gray-500">Summer 2025</span>
+              </div>
+              <p className="text-gray-600 mb-3">Ultravox AI</p>
+              <p className="text-gray-700 leading-relaxed">
+                Building large-scale audio data pipelines (for 1mil+ hours of audio) to support machine 
+                learning workflows. Designed and optimized them to run on hundreds of H100 GPUs. Training 
+                voice AI models to understand conversational context and take on a variety of tones and roles.
+              </p>
+            </div>
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-medium text-gray-900">Lead Teaching Assistant</h3>
+                <span className="text-sm text-gray-500">Fall 2024 - Spring 2025</span>
               </div>
               <p className="text-gray-600 mb-3">University of Washington CSE</p>
               <p className="text-gray-700 leading-relaxed">
@@ -103,19 +146,19 @@ export default function Home() {
               className="text-blue-600 hover:underline"
             >
               Email
-            </a>
-            <a 
+        </a>
+        <a
               href="https://github.com/leotian" 
-              target="_blank" 
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               GitHub
-            </a>
-            <a 
+        </a>
+        <a
               href="https://linkedin.com/in/leotian" 
-              target="_blank" 
-              rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               LinkedIn
