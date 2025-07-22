@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface PinnedPhotoProps {
   src: string;
   alt: string;
@@ -26,9 +28,11 @@ export default function PinnedPhoto({ src, alt, side, rotation = 0, caption }: P
             e.currentTarget.style.transform = `rotate(${rotation}deg) scale(1) translateX(0)`;
           }}
         >
-          <img 
+          <Image 
             src={src} 
             alt={alt}
+            width={160}
+            height={160}
             className="w-40 h-40 object-cover"
           />
           {caption && (

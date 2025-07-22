@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface PinnedPhotoProps {
   src: string;
   alt: string;
@@ -27,9 +29,11 @@ export default function PinnedPhoto({ src, alt, side, rotation = 0, caption }: P
         
         {/* Photo */}
         <div className="bg-white p-2 shadow-lg transform transition-transform duration-200 group-hover:scale-105">
-          <img 
+          <Image 
             src={src} 
             alt={alt}
+            width={96}
+            height={96}
             className="w-24 h-24 object-cover"
           />
           {caption && (

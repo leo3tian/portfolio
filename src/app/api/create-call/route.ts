@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const API_KEY = process.env.ULTRAVOX_API_KEY;
 const AGENT = process.env.ULTRAVOX_AGENT;
 
-export async function POST(request: NextRequest) {
+export async function POST(_request: NextRequest) {
   try {
     // Parse the request body (though currently not used, keeping for future)
     // const body = await request.json();
