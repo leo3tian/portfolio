@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const API_KEY = process.env.ULTRAVOX_API_KEY;
 const AGENT = process.env.ULTRAVOX_AGENT;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function POST(_request: NextRequest) {
   try {
     // Parse the request body (though currently not used, keeping for future)
