@@ -10,10 +10,6 @@ export default function Work() {
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-3xl font-normal text-gray-900 mb-4">Projects</h1>
-          <p className="text-gray-700 leading-relaxed">
-            A collection of projects I&apos;ve worked on, from internships to personal experiments. 
-            Each project represents a learning opportunity and a chance to solve interesting problems.
-          </p>
         </div>
 
         {/* Projects List */}
@@ -35,17 +31,11 @@ export default function Work() {
               <div className="mb-3">
                 <span className="text-sm text-gray-600">{project.company}</span>
                 <span className="text-sm text-gray-400 mx-2">•</span>
-                <span className="text-sm text-gray-600">{project.type}</span>
-                <span className="text-sm text-gray-400 mx-2">•</span>
                 <span className="text-sm text-gray-600">{project.duration}</span>
               </div>
               
               <p className="text-gray-700 mb-4 leading-relaxed">
                 {project.description}
-              </p>
-              
-              <p className="text-xs text-gray-500 mb-4">
-                {project.technologies.join(' • ')}
               </p>
               
               <div className="flex space-x-4">
@@ -63,16 +53,6 @@ export default function Work() {
                     className="text-blue-600 hover:underline text-sm"
                   >
                     Live demo
-                  </a>
-                )}
-                {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline text-sm"
-                  >
-                    Source code
                   </a>
                 )}
               </div>

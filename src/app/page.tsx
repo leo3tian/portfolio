@@ -50,7 +50,7 @@ export default function Home() {
                 alt="Ultravox AI office"
                 side="right"
                 rotation={-3}
-                caption="Love the team!"
+                caption="The team @ Ultravox!"
               />
               <h3 className="text-lg font-medium text-gray-900 mb-3">Interning at Ultravox AI</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -66,7 +66,7 @@ export default function Home() {
                 alt="Sussi app interface"
                 side="left"
                 rotation={2}
-                caption="Presenting Sussi "
+                caption="Presenting Sussi @ Llamacon"
               />
               <h3 className="text-lg font-medium text-gray-900 mb-3">Building Sussi</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -77,7 +77,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Learning */}
+            {/* 
             <div className="relative">
               <h3 className="text-lg font-medium text-gray-900 mb-3">Currently Learning</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -85,7 +85,7 @@ export default function Home() {
                 the intersection of AI and user experience design - particularly how to make AI interactions 
                 feel natural and intuitive rather than robotic.
               </p>
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -138,17 +138,17 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Contact</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Feel free to reach out if you&apos;d like to collaborate on a project or just chat about technology.
+            For thoughts, questions, and opportunities, the best way to reach me is via email: tleo[at]cs[dot]washington[dot]edu. I respond fast! 
           </p>
           <div className="space-x-6">
             <a 
-              href="mailto:leo.tian@example.com" 
+              href="mailto:tleo@cs.washington.edu" 
               className="text-blue-600 hover:underline"
             >
               Email
         </a>
         <a
-              href="https://github.com/leotian" 
+              href="https://github.com/leo3tian" 
           target="_blank"
           rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
@@ -156,9 +156,9 @@ export default function Home() {
               GitHub
         </a>
         <a
-              href="https://linkedin.com/in/leotian" 
-          target="_blank"
-          rel="noopener noreferrer"
+              href="https://linkedin.com/in/leo-tian" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
             >
               LinkedIn

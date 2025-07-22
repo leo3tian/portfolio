@@ -41,25 +41,32 @@ export default function LiveSubtitles({ isActive }: LiveSubtitlesProps) {
     };
   }, [session, isActive]);
 
+  // Function to get the last portion of text that fits well
+  const getDisplayText = (text: string, maxWords: number = 12) => {
+    const words = text.split(' ');
+    if (words.length <= maxWords) return text;
+    return '...' + words.slice(-maxWords).join(' ');
+  };
+
   if (!isActive) return null;
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-0 max-w-sm mx-4">
+    <div className="flex flex-col items-center justify-center min-w-0 max-w-lg mx-4">
       {currentTranscript ? (
         <div className="text-center w-full">
           <div className="text-xs text-blue-200 mb-1">
             {currentTranscript.speaker === 'user' ? 'You' : 'Leo'}
           </div>
-          <div className={`text-sm leading-tight px-2 ${
+          <div className={`text-sm leading-tight px-2 whitespace-nowrap overflow-hidden ${
             currentTranscript.isFinal ? 'text-blue-100' : 'text-white font-medium'
           }`}>
-            {currentTranscript.text}
+            {getDisplayText(currentTranscript.text)}
           </div>
         </div>
       ) : (
         <div className="text-center">
           <div className="text-xs text-blue-200">
-            Listening...
+            Connecting...
           </div>
           <div className="flex items-center justify-center gap-1 mt-1">
             <div className="w-1 h-1 bg-blue-200 rounded-full animate-pulse"></div>

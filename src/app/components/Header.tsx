@@ -37,7 +37,7 @@ export default function Header() {
             {/* Navigation - slides left when active */}
             <nav className={`
               flex space-x-8 transition-all duration-500 ease-in-out
-              ${isActive ? '-translate-x-4' : 'translate-x-0'}
+              ${isActive ? '-translate-x-8' : 'translate-x-0'}
             `}>
               <Link 
                 href="/" 
@@ -75,7 +75,7 @@ export default function Header() {
             {/* Speak to me button - slides right when active */}
             <div className={`
               relative transition-all duration-500 ease-in-out
-              ${isActive ? 'translate-x-4' : 'translate-x-0'}
+              ${isActive ? 'translate-x-8' : 'translate-x-0'}
             `}>
               <button
                 onClick={handleSpeakClick}
