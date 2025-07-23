@@ -98,20 +98,20 @@ export default function Home() {
           <div className="space-y-8">
             <div>
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-medium text-gray-900">Forward Deployed Software Engineer Intern</h3>
+                <h3 className="text-lg font-medium text-gray-900">Palantir</h3>
                 <span className="text-sm text-gray-500">Fall 2025</span>
               </div>
-              <p className="text-gray-600 mb-3">Palantir</p>
+              <p className="text-gray-600 mb-3">Forward Deployed Software Engineer Intern</p>
               <p className="text-gray-700 leading-relaxed">
                 Incoming Fall 2025 - FDSE Commercial Team
               </p>
             </div>
             <div>
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-medium text-gray-900">Software Engineer Intern</h3>
+                <h3 className="text-lg font-medium text-gray-900">Ultravox AI</h3>
                 <span className="text-sm text-gray-500">Summer 2025</span>
               </div>
-              <p className="text-gray-600 mb-3">Ultravox AI</p>
+              <p className="text-gray-600 mb-3">Software Engineer Intern</p>
               <p className="text-gray-700 leading-relaxed">
                 Building large-scale audio data pipelines (for 1mil+ hours of audio) to support machine 
                 learning workflows. Designed and optimized them to run on hundreds of H100 GPUs. Training 
@@ -120,10 +120,10 @@ export default function Home() {
             </div>
             <div>
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-medium text-gray-900">Lead Teaching Assistant</h3>
+                <h3 className="text-lg font-medium text-gray-900">Paul G. Allen School of Computer Science & Engineering</h3>
                 <span className="text-sm text-gray-500">Fall 2024 - Spring 2025</span>
               </div>
-              <p className="text-gray-600 mb-3">University of Washington CSE</p>
+              <p className="text-gray-600 mb-3">Lead Teaching Assistant</p>
               <p className="text-gray-700 leading-relaxed">
                 TA for CSE 12x introductory programming courses. Led lab sections, held office hours, 
                 and mentored 100+ students in programming fundamentals.
@@ -138,7 +138,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Contact</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            For thoughts, questions, and opportunities, the best way to reach me is via email: tleo[at]cs[dot]washington[dot]edu. I respond fast! 
+            For thoughts, questions, and opportunities, the best way to reach me is via email: tleo[at]cs[dot]washington[dot]edu. I try to respond fast! 
           </p>
           <div className="space-x-6">
             <a 

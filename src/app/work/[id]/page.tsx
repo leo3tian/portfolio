@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             href="/work"
             className="text-blue-600 hover:underline text-sm"
           >
-            ← Back to projects
+            ← Back to portfolio
           </Link>
         </div>
         

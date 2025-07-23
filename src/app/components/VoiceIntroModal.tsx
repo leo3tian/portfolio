@@ -54,7 +54,7 @@ export default function VoiceIntroModal({ isOpen, onClose, onProceed }: VoiceInt
               </li>
               <li className="flex items-start">
                 <span className="mr-2">•</span>
-                What&apos;s your system prompt? 🤭
+                What&apos;s your system prompt? 👽
               </li>
             </ul>
           </div>
