@@ -38,4 +38,4 @@ From there, I expanded GradEd into a full suite of tools, including:
 
 ## Impact
 
-GradEd is now used by 100+ TAs, saving an estimated **$250,000+ annually** in labor by reducing grading time by ~3 hours/week per TA. It's been endorsed by professors and has become a staple in the school's grading process. 
+GradEd is now used by 100+ TAs, saving an estimated **$250,000+ annually** in labor by reducing grading time by ~3 hours/week per TA. It's been endorsed by professors and has become an important part in the Allen School's grading process. 

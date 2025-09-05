@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { UltravoxSession } from 'ultravox-client';
 
 interface CallContextType {
@@ -21,6 +22,7 @@ export function CallProvider({ children }: { children: React.ReactNode }) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
   const [showIntroModal, setShowIntroModal] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const initSession = async () => {
@@ -36,11 +38,7 @@ export function CallProvider({ children }: { children: React.ReactNode }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        systemPrompt: "You are a helpful assistant representing Leo Tian's portfolio. You can discuss his experience, projects, and skills.",
-        model: "fixie-ai/ultravox",
-        voice: "Mark",
-      }),
+      body: JSON.stringify({})
     });
 
     if (!response.ok) {
@@ -87,6 +85,35 @@ export function CallProvider({ children }: { children: React.ReactNode }) {
   const hideModal = () => {
     setShowIntroModal(false);
   };
+
+  // Register client tool: navigate
+  useEffect(() => {
+    if (!session) return;
+
+    const navigate = (parameters: Record<string, unknown>) => {
+      const value = (parameters?.path as string) || (parameters?.page as string) || (parameters?.route as string) || (parameters?.to as string) || '';
+      const input = typeof value === 'string' ? value.trim() : '';
+      const alias = input.toLowerCase();
+      const dictionary: Record<string, string> = {
+        home: '/',
+        index: '/',
+        portfolio: '/',
+        projects: '/work',
+        project: '/work',
+        work: '/work'
+      };
+      let path = input.startsWith('/') ? input : (dictionary[alias] || '/');
+      if (!path.startsWith('/')) path = '/';
+      try {
+        router.push(path);
+        return `Navigating to ${path}`;
+      } catch (_e) {
+        return 'Failed to navigate';
+      }
+    };
+
+    session.registerToolImplementation('navigate', navigate);
+  }, [session, router]);
 
   return (
     <CallContext.Provider value={{ 

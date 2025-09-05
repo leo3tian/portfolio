@@ -6,8 +6,14 @@ const AGENT = process.env.ULTRAVOX_AGENT;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function POST(_request: NextRequest) {
   try {
-    // Parse the request body (though currently not used, keeping for future)
-    // const body = await request.json();
+    // Passthrough request body to Ultravox; fallback to {}
+    let payload: unknown = {};
+    try {
+      const parsed = await _request.json();
+      payload = (parsed && typeof parsed === 'object') ? parsed : {};
+    } catch {
+      payload = {};
+    }
     
     const response = await fetch(`https://api.ultravox.ai/api/agents/${AGENT}/calls`, {
       method: "POST",
@@ -15,9 +21,9 @@ export async function POST(_request: NextRequest) {
         "Content-Type": "application/json",
         "X-API-Key": API_KEY as string,
       },
-      body: JSON.stringify({}),
+      body: JSON.stringify(payload),
     });
-    // Future: body: JSON.stringify({systemPrompt: body.systemPrompt, model: body.model, voice: body.voice})
+    // Note: Unsupported fields are ignored by the Ultravox API; agent defaults apply otherwise
     
     console.log('Ultravox API response status:', response.status);
     const data = await response.json();
